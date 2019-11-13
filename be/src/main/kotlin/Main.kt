@@ -1,3 +1,5 @@
+import adapter.Api
+
 fun main() {
-    println("I'm main")
+    Api()
 }
