@@ -5,7 +5,7 @@ import io.javalin.apibuilder.ApiBuilder.*
 
 class Api {
     private val app: Javalin = Javalin
-        .create ()
+        .create { it.enableCorsForAllOrigins() }
         .routes {
             get("whoami", IdentityHandler())
         }
