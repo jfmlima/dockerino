@@ -5,7 +5,6 @@ import (
 	"net/http"
 	"proxy/internal"
 	"time"
-
 )
 
 func main() {
