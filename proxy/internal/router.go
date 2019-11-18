@@ -15,7 +15,7 @@ func (r Router) Routes() *mux.Router {
 		_ = json.NewEncoder(w).Encode(map[string]bool{"ok": true})
 	})
 
-	static := Handler{StaticPath: "build", IndexPath: "index.html"}
+	static := Handler{StaticPath: "static", IndexPath: "index.html"}
 	router.PathPrefix("/").Handler(static)
 
 	return router
