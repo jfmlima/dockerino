@@ -10,7 +10,7 @@ import (
 func main() {
 	srv := &http.Server{
 		Handler: internal.Router{}.Routes(),
-		Addr: ":8000",
+		Addr: ":8081",
 		WriteTimeout: 15 * time.Second,
 		ReadTimeout:  15 * time.Second,
 	}
