@@ -1,4 +1,3 @@
- 
 FROM gradle:6.0.0-jdk11 as build
 WORKDIR /usr/src/app/be
 COPY ./be ./
