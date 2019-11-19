@@ -7,7 +7,7 @@ services:
     build:
       context: ../
       dockerfile: ./dockerfiles/be.Dockerfile
-    environment: 
+    environment:
       PORT: 8080
     ports:
       - 8080:8080
@@ -25,6 +25,8 @@ services:
     build:
       context: ../
       dockerfile: ./dockerfiles/proxy.Dockerfile
+    environment:
+      PORT: 8081
     ports:
       - 8081:8081
   proxy-fe:
@@ -33,5 +35,7 @@ services:
     build:
       context: ../
       dockerfile: ./dockerfiles/proxy-fe.Dockerfile
+    environment:
+      PORT: 8082
     ports:
-      - 8081:8081
+      - 8082:8082
