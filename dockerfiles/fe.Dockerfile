@@ -1,4 +1,3 @@
-
 FROM node:current-alpine as build-frontend
 WORKDIR /usr/src/app/fe
 COPY ./fe ./
