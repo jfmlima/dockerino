@@ -9,7 +9,7 @@ const Docker: React.FC = () => {
     const [text, setText] = useState("");
 
     useEffect(() => {
-        axios.get("http://localhost:8080/whoami")
+        axios.get("api/whoami")
             .then((t: AxiosResponse<Response>) => setText(t.data.value))
     }, []);
 

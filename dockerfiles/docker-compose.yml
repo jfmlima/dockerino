@@ -4,6 +4,8 @@ services:
   be:
     tty: false
     image: dockerino/be
+    networks:
+      - backend
     build:
       context: ../
       dockerfile: ./dockerfiles/be.Dockerfile
@@ -32,6 +34,9 @@ services:
   proxy-fe:
     tty: false
     image: dockerino/proxy-fe
+    networks:
+      - backend
+      - frontend
     build:
       context: ../
       dockerfile: ./dockerfiles/proxy-fe.Dockerfile
@@ -39,3 +44,9 @@ services:
       PORT: 8082
     ports:
       - 8082:8082
+
+networks:
+  frontend:
+    internal: false
+  backend:
+    internal: true

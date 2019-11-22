@@ -10,7 +10,6 @@ import (
 
 func main() {
 	port := os.Getenv("PORT")
-	println(port)
 	srv := &http.Server{
 		Handler: internal.Router{}.Routes(),
 		Addr: ":" + port,
